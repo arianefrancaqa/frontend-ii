@@ -81,8 +81,6 @@ function resetarPontuacao() {
     pontosMaquina = 0;
 }
 
-
-
 /* 
 Implementação utilizando apenas a estrutura condicional IF e sem a utilização de Funções
 function jogar() {
