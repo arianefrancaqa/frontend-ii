@@ -78,37 +78,10 @@ function mudarModoDesign() {
     item.classList.toggle("dark-card-text");
   }
 }
-
-// for (let index = 0; index < 5; index++) {
-//   let divItem = document.createElement("div");
-//   divItem.classList.add("item");
-
-//   console.log(divItem);
-// }
-
-// function createImgElement(imgPath, index) {
-//   let img = document.createElement("img");
-//   img.src = imgPath;
-//   let item = document.getElementsByClassName("item")[index]
-//   return item.appendChild(img);
-//   //return document.getElementsByClassName("item").appendChild(img);
-// }
-
-// function createTitle(titleText, index) {
-//   let title = document.createElement("h2");
-//   let item = document.getElementsByClassName("item")[index]
-//   item.appendChild(title);
-//   const textNode = document.createTextNode(titleText);
-//   return title.appendChild(textNode);
-// }
-
-// function createDescription(descriptionText, index) {
-//   let description = document.createElement("p");
-//   let item = document.getElementsByClassName("item")[index]
-//   item.appendChild(description);
-//   const textNode = document.createTextNode(descriptionText);
-//   return description.appendChild(textNode);
-// }
+let item
+listaDeFelinos.forEach((item) => {
+  addItemNaTela(item.imgUrl, item.title, item.description, item.createdAt);
+});
 
 function addItemNaTela(urlImagem, titulo, descricao, data) {
   let itemCardDiv = document.createElement("div");
@@ -133,24 +106,3 @@ function addItemNaTela(urlImagem, titulo, descricao, data) {
 
   document.getElementById("cards").appendChild(itemCardDiv);
 }
-let item
-listaDeFelinos.forEach((item) => {
-  addItemNaTela(item.imgUrl, item.title, item.description, item.createdAt);
-});
-//   {
-//     title: 'Tigre',
-//     imgUrl: './imagens/tiger.jpg',
-//     description: 'O tigre (Panthera tigris) é uma das espécies da subfamília pantherine (família Felidae) pertencente ao gênero Panthera. Encontra-se apenas no continente asiático; É um predador carnívoro e é a maior espécie de felídeo do mundo, juntamente com o leão, ambos podem atingir um tamanho comparável ao de fósseis de felinos maiores.',
-//     createdAt: '2021-06-01T23:12:11.837Z'
-// },
-
-// {/* <div class="item">
-//       <img src="./imagens/tiger.jpg">
-//       <h2>O tigre</h2>
-//       <p>
-//         O tigre (Panthera tigris) é uma das espécies da subfamília Pantherinae (família Felidae)
-//         pertencente ao gênero Panthera. É encontrado de forma nativa apenas no continente asiático; é um predador
-//         carnívoro e
-//         é a maior espécie de felino do mundo junto com o leão.
-//       </p>
-//     </div> */}
