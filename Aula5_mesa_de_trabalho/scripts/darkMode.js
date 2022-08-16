@@ -79,46 +79,64 @@ function mudarModoDesign() {
   }
 }
 
-for (let index = 0; index < 5; index++) {
-  let divItem = document.createElement("div");
-  divItem.classList.add("item");
+// for (let index = 0; index < 5; index++) {
+//   let divItem = document.createElement("div");
+//   divItem.classList.add("item");
 
-  console.log(divItem);
+//   console.log(divItem);
+// }
+
+// function createImgElement(imgPath, index) {
+//   let img = document.createElement("img");
+//   img.src = imgPath;
+//   let item = document.getElementsByClassName("item")[index]
+//   return item.appendChild(img);
+//   //return document.getElementsByClassName("item").appendChild(img);
+// }
+
+// function createTitle(titleText, index) {
+//   let title = document.createElement("h2");
+//   let item = document.getElementsByClassName("item")[index]
+//   item.appendChild(title);
+//   const textNode = document.createTextNode(titleText);
+//   return title.appendChild(textNode);
+// }
+
+// function createDescription(descriptionText, index) {
+//   let description = document.createElement("p");
+//   let item = document.getElementsByClassName("item")[index]
+//   item.appendChild(description);
+//   const textNode = document.createTextNode(descriptionText);
+//   return description.appendChild(textNode);
+// }
+
+function addItemNaTela(urlImagem, titulo, descricao, data) {
+  let itemCardDiv = document.createElement("div");
+  itemCardDiv.classList.add(item);
+
+  let imagem = document.createElement("img");
+  imagem.src = urlImagem;
+
+  let tituloH2 = document.createElement("h2");
+  tituloH2.innerHTML = titulo;
+
+  let descricaoP = document.createElement("p");
+  descricaoP.innerHTML = descricao;
+
+  let dataP = document.createElement("p");
+  dataP.innerHTML = data;
+
+  itemCardDiv.appendChild(imagem);
+  itemCardDiv.appendChild(tituloH2);
+  itemCardDiv.appendChild(descricaoP);
+  itemCardDiv.appendChild(dataP);
+
+  document.getElementById("cards").appendChild(itemCardDiv);
 }
-
-function createImgElement(imgPath) {
-  let img = document.createElement("img");
-  img.src = imgPath;
-  return document.getElementByClass("item").appendChild(img);
-}
-
-function createTitle(titleText) {
-  let title = document.createElement("h2");
-  document.getElementByClass("item").appendChild(title);
-  const textNode = document.createTextNode(titleText);
-  return title.appendChild(textNode);
-}
-
-function createDescription(descriptionText) {
-  let description = document.createElement("p");
-  document.getElementByClass("item").appendChild(description);
-  const textNode = document.createTextNode(descriptionText);
-  return description.appendChild(textNode);
-}
-
-function addItemNaTela() {
-  for (let index = 0; index <= 5; index++) {
-    let divItem = document.createElement("div");
-    divItem.classList.add("item");
-
-    divItem.createTitle(listaDeFelinos[i].title);
-    divItem.createImgElement(listaDeFelinos[i].imgUrl);
-    divItem.createDescription(listaDeFelinos[i].description);
-    console.log(divItem);
-  }
-  return divItem
-}
-
+let item
+listaDeFelinos.forEach((item) => {
+  addItemNaTela(item.imgUrl, item.title, item.description, item.createdAt);
+});
 //   {
 //     title: 'Tigre',
 //     imgUrl: './imagens/tiger.jpg',
