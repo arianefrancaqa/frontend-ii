@@ -10,18 +10,26 @@
 </head>
 
 <body>
-    <h1>Diário de Receitas 🍳</h1>
-    <form>
-        <label>Título:</label>
-        <input id="tituloPost"/>
-        <label>Descrição:</label>
-        <input id="descricaoPost"/>
-        <label>Url da Imagem:</label>
-        <input id="urlImagemPost"/>
-        <button id="submitButton">Submit</button>
-    </form>
+    <header>
+        <h1>Diário de Receitas 🍳</h1>
+        <div id="form">
+            <form>
+                <label>Título:</label>
+                <input id="tituloPost" />
+                <label>Descrição:</label>
+                <textarea name="descricaoPost" id="descricaoPost" cols="30" rows="10"></textarea>
+                <label>Url da Imagem:</label>
+                <input id="urlImagemPost" />
+                <button id="submitButton">Submit</button>
+            </form>
+        </div>
+    </header>
 
-    <div id="cards" class="container"></div>
+    <main>
+        <h2>Lista de receitas:</h2>
+        <div id="cards" class="container">
+        </div>
+    </main>
 
     <script src="scripts/criaPost.js"></script>
 </body>

@@ -8,6 +8,7 @@
 
 body {
   background-color: rgb(219, 219, 219);
+  display: block;
 }
 
 #barra-menu {

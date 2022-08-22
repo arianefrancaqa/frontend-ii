@@ -13,14 +13,14 @@ window.addEventListener("load", function () {
         let imagem = document.createElement("img");
         imagem.src = urlImagem;
 
-        let tituloH2 = document.createElement("h2");
-        tituloH2.innerHTML = titulo;
+        let tituloH3 = document.createElement("h3");
+        tituloH3.innerHTML = titulo;
 
         let descricaoP = document.createElement("p");
         descricaoP.innerHTML = descricao;
 
         itemCardDiv.appendChild(imagem);
-        itemCardDiv.appendChild(tituloH2);
+        itemCardDiv.appendChild(tituloH3);
         itemCardDiv.appendChild(descricaoP);
 
         document.getElementById("cards").appendChild(itemCardDiv);

@@ -8,12 +8,35 @@
 
 body {
   background-color: rgb(219, 219, 219);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#form {
+  width: 300px;
+  height: 130%;
+  background-color: rgba(60, 61, 61, 0.445);
+  border-radius: 1%;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-radius: 1%;
+  justify-content: space-between;
+}
+
+main {
+  width: 50%;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   width: 80%;
   margin: 2em 10%;
 }
@@ -32,7 +55,20 @@ body {
   width: 100%;
 }
 
-.item h2 {
+img {
+    width: 70%;
+}
+
+p {
+    width: 70%;
+}
+
+.item h3 {
   font-size: 1em;
   margin-bottom: 0.2em;
+  margin-top: 1em;
+}
+
+main h2{
+    margin-left: 2em;
 }
