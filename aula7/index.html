@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Galeria</h1>
+    <label for="urlImagem1" onmouseover="ganhouFocoInput()">
+        <input type="text" name="url1" 
+        id="urlImagem1" 
+        placeholder="Digite uma URL de imagem"
+        onblur="perdeuFocoInput()"  onfocus = "this.value='';"
+        />
+        <input type="text" name="url2" 
+        id="urlImagem2" 
+        placeholder="Digite uma URL de imagem"
+        onblur="perdeuFocoInput()"  onfocus = "this.value='';"
+        />
+        <input type="text" name="url3" 
+        id="urlImagem3" 
+        placeholder="Digite uma URL de imagem"
+        onblur="perdeuFocoInput()"  onfocus = "this.value='';"
+        />
+    </label>
+
+    <button onclick="clickEnviar()">Enviar</button>
+
+    <br>
+
+    <div id="galeria"></div>
+
+    <script src="scripts/criaImagem.js"></script>
+</body>
+</html>
