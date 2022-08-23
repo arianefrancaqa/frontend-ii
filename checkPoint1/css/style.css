@@ -5,7 +5,9 @@
   padding: 0;
   font-family: "Open Sans", sans-serif;
 }
-
+/* TODO Parte responsiva 
+    Fazer o campo ser limpo após o submit
+    menu flutuante na rolagem*/
 body {
   background-color: rgb(219, 219, 219);
   width: 100%;
@@ -13,32 +15,51 @@ body {
   flex-direction: row;
 }
 
-#form {
-  width: 300px;
-  height: 130%;
+header {
+  width: 25%;
+  height: 100%;
   background-color: rgba(60, 61, 61, 0.445);
   border-radius: 1%;
-  align-items: center;
+  
+}
+
+h1 {
+    margin-left: 0.5em;
+}
+
+#instrucoes {
+    padding-left: 1.5em;
+    padding-top: 1em;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  width: 200px;
   border-radius: 1%;
-  justify-content: space-between;
+  height: 100%;
+}
+
+#formulario form {
+    width: 90%;
+    padding: 1em;
+}
+
+form label {
+    margin-top: 6.5%;
+    font-weight: 600;
 }
 
 main {
-  width: 50%;
+  width: 75%;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   width: 80%;
   margin: 2em 10%;
+  
 }
 
 .item {
@@ -47,6 +68,7 @@ main {
   box-sizing: border-box;
   padding: 1.5em;
   margin-bottom: 1em;
+  margin-left: 1em;
   border-radius: 5px;
   border: 1px solid lightgray;
 }
@@ -55,11 +77,7 @@ main {
   width: 100%;
 }
 
-img {
-    width: 70%;
-}
-
-p {
+img, p {
     width: 70%;
 }
 
@@ -70,5 +88,11 @@ p {
 }
 
 main h2{
-    margin-left: 2em;
+    margin-left: 1em;
+}
+
+#submitButton {
+    margin-top: 30%;
+    font-size: large;
+    font-weight: bold;
 }

@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
     let divPostReceitas = document.getElementById("cards");
 
     function addReceitaNaTela(titulo, descricao, urlImagem) {
-        let item
+        let item = "item"
         let itemCardDiv = document.createElement("div");
         itemCardDiv.classList.add(item);
 
