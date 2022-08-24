@@ -5,6 +5,14 @@ window.addEventListener("load", function () {
     let buttonSubmit = document.getElementById("submitButton");
     let divPostReceitas = document.getElementById("cards");
 
+    let form = document.querySelector("form")
+
+    form.addEventListener("submit", (evento) =>{
+        evento.preventDefault()
+
+        console.log("form enviado")
+    })
+
     function addReceitaNaTela(titulo, descricao, urlImagem) {
         let item = "item"
         let itemCardDiv = document.createElement("div");
