@@ -10,9 +10,10 @@
     - Parte responsiva 
     - Fazer o campo ser limpo após o submit - feito
     - menu flutuante na rolagem
-    - Colocar campo de data no card para saber a hora do post
+    - Colocar campo de data no card para saber a hora do post - feito
     - Criar Select de categorias de tipo de prato Ex as categorias do ifood (hamburger, pizza, sushi, caseira). Este seria como campo extra
-*/
+    - Extra: resolver problemas do textarea com quebra de linha
+    */
 
 body {
   background-color: rgb(219, 219, 219);
@@ -26,16 +27,20 @@ header {
   height: 100%;
   background-color: rgba(60, 61, 61, 0.445);
   border-radius: 1%;
-  
+  position: fixed;
 }
 
 h1 {
-    margin-left: 0.5em;
+  margin-left: 0.5em;
 }
 
 #instrucoes {
-    padding-left: 1.5em;
-    padding-top: 1em;
+  padding-left: 1.5em;
+  padding-top: 1em;
+}
+
+#cards {
+  padding-left: 25%;
 }
 
 form {
@@ -46,13 +51,13 @@ form {
 }
 
 #formulario form {
-    width: 90%;
-    padding: 1em;
+  width: 90%;
+  padding: 1em;
 }
 
 form label {
-    margin-top: 6.5%;
-    font-weight: 600;
+  margin-top: 6.5%;
+  font-weight: 600;
 }
 
 main {
@@ -65,7 +70,6 @@ main {
   flex-direction: row;
   width: 80%;
   margin: 2em 10%;
-  
 }
 
 .item {
@@ -83,8 +87,9 @@ main {
   width: 100%;
 }
 
-img, p {
-    width: 70%;
+img,
+p {
+  width: 70%;
 }
 
 .item h3 {
@@ -93,12 +98,13 @@ img, p {
   margin-top: 1em;
 }
 
-main h2{
-    margin-left: 1em;
+main h2 {
+  padding-left: 35%;
+  padding-top: 0.5%;
 }
 
 #submitButton {
-    margin-top: 30%;
-    font-size: large;
-    font-weight: bold;
+  margin-top: 30%;
+  font-size: large;
+  font-weight: bold;
 }

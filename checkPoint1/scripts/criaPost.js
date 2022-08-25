@@ -3,21 +3,20 @@ window.addEventListener("load", function () {
   let inputDescricao = document.getElementById("descricaoPost");
   let inputUrl = document.getElementById("urlImagemPost");
   let buttonSubmit = document.getElementById("submitButton");
-  let divPostReceitas = document.getElementById("cards");
-
   let form = document.querySelector("form");
 
-  form.addEventListener("submit", (evento) => {
-    evento.preventDefault();
-  });
+  function transformaData() {
+    let data = new Date();
+    let ano = data.getFullYear();
+    let mes = data.getMonth() + 1;
+    let dia = data.getDate();
+    let hora = data.getHours();
+    let minutos = data.getMinutes();
+    let dataFormatada = dia + "/" + mes + "/" + ano;
 
-  // function submit(e) {
-  //     e.preventDefault()
-  //     for (let index = 0; index < form.length; index++) {
-  //         const elemento = form[index];
-  //         form[index].value = ''
-  //     }
-  // }
+    return `Post criado dia ${dataFormatada}
+    às ${hora}:${minutos}`;
+  }
 
   function addReceitaNaTela(titulo, descricao, urlImagem) {
     let item = "item";
@@ -33,9 +32,13 @@ window.addEventListener("load", function () {
     let descricaoP = document.createElement("p");
     descricaoP.innerHTML = descricao;
 
+    let dataDoPost = document.createElement("p");
+    dataDoPost.innerHTML = transformaData();
+
     itemCardDiv.appendChild(imagem);
     itemCardDiv.appendChild(tituloH3);
     itemCardDiv.appendChild(descricaoP);
+    itemCardDiv.appendChild(dataDoPost);
 
     document.getElementById("cards").appendChild(itemCardDiv);
   }
