@@ -12,7 +12,8 @@
     - menu fixo na rolagem - feito
     - Colocar campo de data no card para saber a hora do post - feito
     - Criar Select de categorias de tipo de prato Ex as categorias do ifood (hamburger, pizza, sushi, caseira). Este seria como campo extra
-    - Extra: resolver problemas do textarea com quebra de linha
+    - Extra: resolver problemas do textarea com quebra de linha - feito gloria deus
+    - Extra2: fazer função para tornar os campos mandatórios
     */
 
 body {
@@ -96,6 +97,14 @@ p {
   font-size: 1em;
   margin-bottom: 0.2em;
   margin-top: 1em;
+}
+
+.dataP {
+  text-decoration-line: underline;
+  font-size: small;
+  padding-top: 1em;
+  display: flex;
+  justify-content: flex-end;
 }
 
 main h2 {

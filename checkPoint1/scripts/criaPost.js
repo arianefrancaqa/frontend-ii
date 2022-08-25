@@ -33,13 +33,14 @@ window.addEventListener("load", function () {
     descricaoP.innerHTML = descricao;
 
     let dataDoPost = document.createElement("p");
+    dataDoPost.setAttribute("class", "dataP")
     dataDoPost.innerHTML = transformaData();
 
     itemCardDiv.appendChild(imagem);
     itemCardDiv.appendChild(tituloH3);
     itemCardDiv.appendChild(descricaoP);
     itemCardDiv.appendChild(dataDoPost);
-
+    
     document.getElementById("cards").appendChild(itemCardDiv);
   }
 
@@ -48,9 +49,10 @@ window.addEventListener("load", function () {
       {
         title: inputTitulo.value,
         imgUrl: inputUrl.value,
-        description: inputDescricao.value,
+        description: inputDescricao.value.replace(/\r?\n/g, "<br>"),
       },
     ];
+
     listaInfosReceitas.forEach((element) => {
       addReceitaNaTela(element.title, element.description, element.imgUrl);
     });
