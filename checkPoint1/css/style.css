@@ -5,13 +5,15 @@
   padding: 0;
   font-family: "Open Sans", sans-serif;
 }
+
 /*  TODO 
     - Parte responsiva 
-    - Fazer o campo ser limpo após o submit
+    - Fazer o campo ser limpo após o submit - feito
     - menu flutuante na rolagem
-    - Colocar campo de data
-    - Criar Select de categorias
+    - Colocar campo de data no card para saber a hora do post
+    - Criar Select de categorias de tipo de prato Ex as categorias do ifood (hamburger, pizza, sushi, caseira). Este seria como campo extra
 */
+
 body {
   background-color: rgb(219, 219, 219);
   width: 100%;
