@@ -126,16 +126,45 @@ form  button:hover{
 }
 
 /*================= MEDIA QUERIES ===================*/
+@media screen and (max-width: 768px) and (min-width: 468px){
 
-@media screen and (max-width: 768px) and (min-width: 280px){
-  
-  
-  .formularios form {
+header {
+  padding-right: 12px;
+}
+
+header p {
+font-size: 12px;
+margin-left: 14px;
+}
+
+header h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+form button {
+  margin-right: 15px;
+}
+
+main h2 {
+  text-align: center;
+  padding-left: 50%;
+}
+
+#submitButton {
+  font-size: 1.8rem;
+}
+
+.formularios form {
     flex-direction: column;
     height: auto;
   }
 
-  .formularios form input {
+.item {
+  margin-left: 5.5em;
+  }
+  
+.formularios form input {
     height: 2.8rem;
     width: 100%;
   }
@@ -152,30 +181,36 @@ form  button:hover{
   }
 }
 
-/*
+
 @media screen and (max-width: 1024px) and (min-width: 769px){
   
-  
-  .formularios form {
-    flex-direction: column;
-    height: auto;
+  .item {
+    width: 14em;
+    margin-left: 0;
   }
 
-  .formularios form input {
-    height: 2.8rem;
-    width: 100%;
+  main h2 {
+    padding-left: 47%;
   }
-  
-.button-form{
-  width: inherit;
-  margin-top: 1.4rem;
+
+  #cards {
+    padding-left: 32%;
+  }
+
+  .container {
+    justify-content: space-around;
+  }
+
 }
+@media screen and (min-width: 1025px){
 
-  .button-form button {
-    width: 100%;
-    min-width: 16.8rem;
-    height: 2.8rem;
+  .item {
+    width: 90em;
+    margin-left: 6em;
   }
-}
 
-*/
+  main h2 {
+    padding-left: 47%;
+  }
+
+}
