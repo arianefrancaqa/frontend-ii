@@ -5,48 +5,79 @@
   padding: 0;
   font-family: "Open Sans", sans-serif;
 }
-/* TODO Parte responsiva 
-    Fazer o campo ser limpo após o submit
-    menu flutuante na rolagem*/
+
+/*  TODO 
+    - Parte responsiva 
+    - Fazer o campo ser limpo após o submit - feito
+    - menu fixo na rolagem - feito
+    - Colocar campo de data no card para saber a hora do post - feito
+    - Criar Select de categorias de tipo de prato Ex as categorias do ifood (hamburger, pizza, sushi, caseira). Este seria como campo extra
+    - Extra: resolver problemas do textarea com quebra de linha - feito gloria deus
+    - Extra2: fazer função para tornar os campos mandatórios
+    */
+
 body {
-  background-color: rgb(219, 219, 219);
+  background-color: #9B9987;
   width: 100%;
   display: flex;
   flex-direction: row;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
 }
 
 header {
   width: 25%;
   height: 100%;
-  background-color: rgba(60, 61, 61, 0.445);
+  background-color: #461220;
   border-radius: 1%;
-  
+  position: fixed;
 }
 
 h1 {
-    margin-left: 0.5em;
+  margin-left: 0.5em;
+  padding-top: 20px;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-size: 3rem;
+  color: #FCB9B2;
+}
+
+h2 {
+  color: #461220;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-size: 3rem;
 }
 
 #instrucoes {
-    padding-left: 1.5em;
-    padding-top: 1em;
+  padding-left: 1.5em;
+  padding-top: 1em;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color: #ffffff;
+}
+
+#cards{
+  padding-left: 25%;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  border-radius: 1%;
   height: 100%;
 }
 
 #formulario form {
-    width: 90%;
-    padding: 1em;
+  width: 90%;
+  padding: 1em;
+  color: #ffcfc9;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
 }
 
 form label {
-    margin-top: 6.5%;
-    font-weight: 600;
+  margin-top: 6.5%;
+  font-weight: 600;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-size: 1.7rem;
 }
 
 main {
@@ -59,7 +90,6 @@ main {
   flex-direction: row;
   width: 80%;
   margin: 2em 10%;
-  
 }
 
 .item {
@@ -71,14 +101,16 @@ main {
   margin-left: 1em;
   border-radius: 5px;
   border: 1px solid lightgray;
+  text-align: justify;
 }
 
 .item img {
   width: 100%;
 }
 
-img, p {
-    width: 70%;
+img,
+p {
+  width: 70%;
 }
 
 .item h3 {
@@ -87,12 +119,178 @@ img, p {
   margin-top: 1em;
 }
 
-main h2{
-    margin-left: 1em;
+.dataP {
+  text-decoration-line: underline;
+  font-size: small;
+  padding-top: 1em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+main h2 {
+  padding-left: 10%;
+  padding-top: 2%;
 }
 
 #submitButton {
-    margin-top: 30%;
-    font-size: large;
-    font-weight: bold;
+  margin-top: 8%;
+  font-weight: bold;
+  padding-bottom: 10px;
+  background-color: #25331d;
+  border: none;
+  color: white;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+  box-shadow: 0 9px #384e39;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+form button:hover{
+  background-color: #FCA311;
+  border: none;
+}
+
+#submitButton:hover {
+  background-color: #384e39;
+  box-shadow: 0 5px #25331d;
+}
+
+#submitButton:active {
+  background-color: #384e39;
+  box-shadow: 0 5px #25331d;
+  transform: translateY(4px);
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+input[type=text]:focus {
+  background-color: rgb(245, 231, 240);
+  border: 1px solid rgb(198, 143, 177);
+  outline: none;
+}
+
+textarea[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+textarea[type=text]:focus {
+  background-color: rgb(245, 231, 240);
+  border: 1px solid rgb(198, 143, 177);
+  outline: none;
+}
+
+#titleImage {
+  width: 3rem;
+  padding-left: 1rem;
+  margin-top: 0.2;
+}
+
+/*================= MEDIA QUERIES ===================*/
+@media screen and (max-width: 768px) and (min-width: 468px){
+
+header {
+  padding-right: 12px;
+}
+
+header p {
+font-size: 12px;
+margin-left: 14px;
+}
+
+header h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+form button {
+  margin-right: 15px;
+}
+
+main h2 {
+  text-align: center;
+  padding-left: 50%;
+}
+
+#submitButton {
+  font-size: 1.8rem;
+}
+
+.formularios form {
+    flex-direction: column;
+    height: auto;
+  }
+
+.item {
+  margin-left: 5.5em;
+  }
+  
+.formularios form input {
+    height: 2.8rem;
+    width: 100%;
+  }
+  
+.button-form{
+  width: inherit;
+  margin-top: 1.4rem;
+}
+
+  .button-form button {
+    width: 100%;
+    min-width: 16.8rem;
+    height: 2.8rem;
+  }
+}
+
+
+@media screen and (max-width: 1024px) and (min-width: 769px){
+  
+  .item {
+    width: 14em;
+    margin-left: 0;
+  }
+
+  main h2 {
+    padding-left: 47%;
+  }
+
+  #cards {
+    padding-left: 32%;
+  }
+
+  .container {
+    justify-content: space-around;
+  }
+
+}
+@media screen and (min-width: 1025px){
+
+  .item {
+    width: 90em;
+    margin-left: 6em;
+  }
+
+  main h2 {
+    padding-left: 47%;
+  }
+
 }
