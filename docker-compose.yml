@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  todoservices:
+    build: .
+    
+    image: arianef/newservice
+    container_name: containerari
+    ports:
+      - "81:80"
